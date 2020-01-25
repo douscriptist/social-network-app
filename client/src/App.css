@@ -154,11 +154,17 @@ img {
 }
 
 .alert {
-  padding: 0.8rem;
-  margin: 1rem 0;
-  opacity: 0.9;
+  padding: 0.4rem;
+  /* margin: 4rem 0; */
+  margin: 5px 0;
+  opacity: 1;
   background: var(--light-color);
   color: #333;
+  /* position: fixed; */
+  border-radius: 10px;
+  /* width: 13rem;
+  right: 160px; */
+  text-align: center;
 }
 
 .btn-primary,
@@ -175,6 +181,20 @@ img {
 .alert-light {
   background: var(--light-color);
   color: #333;
+  transition: ease .4s all;
+
+}
+
+.btn {
+  border: 1px solid transparent;
+}
+
+.btn-light:hover {
+  background-color: var(--dark-color);
+  color: white;
+  opacity: 1 !important;
+  border: 1px solid white;
+  padding: -1px !important;
 }
 
 .btn-dark,
