@@ -9,13 +9,15 @@ const Navbar = ({ logout, auth: { isAuthenticated, loading } }) => {
     <ul>
       {/* <li>
         <Link to='/profiles'> Developers </Link>
+      </li>*/}
+      <li>
+        <Link to='/dashboard'>
+          <i className="fas fa-user"></i>{' '}
+          <span className="hide-sm"> Dashboard </span>
+        </Link>
       </li>
       <li>
-        <Link to='/register'> Sign Up </Link>
-      </li> */}
-      <li>
         <Link to='#!'>
-          {/* <i className="fas fa-sign-out-alt"></i>{' '} */}
           <span className="hide-sm"> TRY </span>
         </Link>
       </li>

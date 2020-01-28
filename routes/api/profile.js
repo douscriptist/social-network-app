@@ -63,11 +63,13 @@ router.post('/', [
   if (bio) profileFields.bio = bio;
   if (status) profileFields.status = status;
   if (githubUsername) profileFields.githubUsername = githubUsername;
-  if (skills) { 
-    // FIX:
-    // LATER:
-    profileFields.skills = skills.split(',').map(skill => skill.trim());
+  // FIX:
+  // LATER:
+  if (skills) {
+    if(typeof skills != "object") profileFields.skills = skills.split(',').map(skill => skill.trim());
+    else profileFields.skills = skills;
   }
+    // profileFields.skills = skills.split(',').map(skill => skill.trim());
 
   // Build Social Object
   profileFields.social = {};
