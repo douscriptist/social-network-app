@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -32,7 +32,7 @@ const AddEducation = ({ addEducation, history }) => {
   }
 
   return (
-    <Fragment>
+    <div className="container">
       <h1 className="large text-primary">
         Add An Education
       </h1>
@@ -88,7 +88,7 @@ const AddEducation = ({ addEducation, history }) => {
         <input type="submit" onClick={e => handleSubmit(e)} className="btn btn-primary my-1" />
         <Link className="btn btn-light my-1" to="/dashboard">Go Back</Link>
       </form>
-    </Fragment>
+    </div>
   )
 }
 

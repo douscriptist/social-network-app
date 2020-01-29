@@ -50,7 +50,7 @@ const CreateProfile = ({ createProfile, history }) => {
   }
 
   return (
-    <Fragment>
+    <div className="container">
       <h1 className="large text-primary">
         Create Your Profile
       </h1>
@@ -166,7 +166,7 @@ const CreateProfile = ({ createProfile, history }) => {
         <input label="SAVE" type="submit" onClick={e => handleSubmit(e)} className="btn btn-primary my-1" />
         <Link to='/dashboard' className="btn btn-light my-1">Go Back</Link>
       </form>
-    </Fragment>
+    </div>
   )
 }
 
