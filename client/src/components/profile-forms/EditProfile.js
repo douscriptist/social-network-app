@@ -38,7 +38,7 @@ const EditProfile = ({ createProfile, history, getCurrentProfile, profile: { pro
       youtube: loading || !profile.youtube ? '' : profile.youtube,
       instagram: loading || !profile.instagram ? '' : profile.instagram
     });
-    //eslint-disable-next-line
+    // eslint-disable-next-line
   }, [loading, getCurrentProfile]);
 
   const {
@@ -69,7 +69,7 @@ const EditProfile = ({ createProfile, history, getCurrentProfile, profile: { pro
   }
 
   return (
-    <Fragment>
+    <div className="container">
       <h1 className="large text-primary">
         Update Your Profile
       </h1>
@@ -184,7 +184,7 @@ const EditProfile = ({ createProfile, history, getCurrentProfile, profile: { pro
         <input type="submit" onClick={e => handleSubmit(e)} className="btn btn-primary my-1" />
         <Link to='/dashboard' className="btn btn-light my-1">Go Back</Link>
       </form>
-    </Fragment>
+    </div>
   )
 }
 

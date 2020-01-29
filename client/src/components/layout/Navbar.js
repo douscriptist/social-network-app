@@ -17,8 +17,9 @@ const Navbar = ({ logout, auth: { isAuthenticated, loading } }) => {
         </Link>
       </li>
       <li>
-        <Link to='#!'>
-          <span className="hide-sm"> TRY </span>
+        <Link to='/profiles'>
+          <i className="fas fa-users"></i>{' '}
+          <span className="hide-sm"> Developers </span>
         </Link>
       </li>
       <li>

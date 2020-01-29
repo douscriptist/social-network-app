@@ -11,12 +11,11 @@ import Education from '../dashboard/Education';
 const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: { loading, profile } }) => {
   useEffect(() => {
     getCurrentProfile();
-    // eslint-disable-next-line
-  }, []);
+  }, [getCurrentProfile]);
 
   return loading && profile === null
     ? <Spinner />
-    : <Fragment>
+    : <div className="container">
       <h1 className="large text-primary">Dashboard</h1>
       <p className="lead">
         <i className="fas fa-user"></i> Welcome {user && user.name}
@@ -38,7 +37,7 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
               Create Profile
       </Link>
         </Fragment>}
-    </Fragment>
+    </div>
 }
 
 Dashboard.propTypes = {
