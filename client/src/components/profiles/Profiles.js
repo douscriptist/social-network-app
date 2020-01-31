@@ -12,7 +12,7 @@ const Profiles = ({ getAllProfiles, profile: { profiles, loading } }) => {
 
   return (
     <div className="container">
-      {loading
+      {profiles.length === 0 || loading
         ? <Spinner />
         : <Fragment>
           <h1 className="large text-primary">Developers</h1>

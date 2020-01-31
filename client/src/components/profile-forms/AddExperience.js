@@ -85,7 +85,7 @@ const AddExperience = ({ addExperience, history }) => {
             onChange={e => handleChange(e)}
           />
         </div>
-        <input type="submit" onClick={e => handleSubmit(e)} className="btn btn-primary my-1" />
+        <input type="submit" value="Add" onClick={e => handleSubmit(e)} className="btn btn-primary my-1" />
         <Link className="btn btn-light my-1" to="/dashboard">Go Back</Link>
       </form>
     </div>

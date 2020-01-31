@@ -93,29 +93,29 @@ const EditProfile = ({ createProfile, history, getCurrentProfile, profile: { pro
           >Give us an idea of where you are at in your career</small>
         </div>
         <div className="form-group">
-          <input type="text" placeholder="Company" name="company" value={company} 
-          onChange={e => handleChange(e)}/>
+          <input type="text" placeholder="Company" name="company" value={company}
+            onChange={e => handleChange(e)} />
           <small className="form-text">
             Could be your own company or one you work for
           </small>
         </div>
         <div className="form-group">
-          <input type="text" placeholder="Website" name="website" value={website} 
-          onChange={e => handleChange(e)}/>
+          <input type="text" placeholder="https://" name="website" value={website}
+            onChange={e => handleChange(e)} />
           <small className="form-text">
             Could be your own or a company website
           </small>
         </div>
         <div className="form-group">
-          <input type="text" placeholder="Location" name="location" value={location} 
-          onChange={e => handleChange(e)}/>
+          <input type="text" placeholder="Location" name="location" value={location}
+            onChange={e => handleChange(e)} />
           <small className="form-text">
             City & state suggested (eg. Boston, MA)
           </small>
         </div>
         <div className="form-group">
-          <input type="text" placeholder="* Skills" name="skills" value={skills} 
-          onChange={e => handleChange(e)}/>
+          <input type="text" placeholder="* Skills" name="skills" value={skills}
+            onChange={e => handleChange(e)} />
           <small className="form-text" >
             Please use comma separated values (eg.
             HTML,CSS,JavaScript,PHP)
@@ -126,16 +126,16 @@ const EditProfile = ({ createProfile, history, getCurrentProfile, profile: { pro
             type="text"
             placeholder="Github Username"
             name="githubUsername"
-            value={githubUsername} 
-          onChange={e => handleChange(e)}
+            value={githubUsername}
+            onChange={e => handleChange(e)}
           />
           <small className="form-text" >
             If you want your latest repos and a Github link, include your username
             </small >
         </div>
         <div className="form-group">
-          <textarea placeholder="A short bio of yourself" name="bio" value={bio} 
-          onChange={e => handleChange(e)}/>
+          <textarea placeholder="A short bio of yourself" name="bio" value={bio}
+            onChange={e => handleChange(e)} />
           <small className="form-text">
             Tell us a little about yourself
             </small>
@@ -151,37 +151,37 @@ const EditProfile = ({ createProfile, history, getCurrentProfile, profile: { pro
         {isVisible && <Fragment>
           <div className="form-group social-input">
             <i className="fab fa-twitter fa-2x"></i>
-            <input type="text" placeholder="Twitter URL" name="twitter" value={twitter} 
-          onChange={e => handleChange(e)}/>
+            <input type="text" placeholder="Twitter @username" name="twitter" value={twitter}
+              onChange={e => handleChange(e)} />
           </div>
 
           <div className="form-group social-input">
             <i className="fab fa-facebook fa-2x"></i>
-            <input type="text" placeholder="Facebook URL" name="facebook" value={facebook} 
-          onChange={e => handleChange(e)}/>
-          </div>
-
-          <div className="form-group social-input">
-            <i className="fab fa-youtube fa-2x"></i>
-            <input type="text" placeholder="YouTube URL" name="youtube" value={youtube} 
-          onChange={e => handleChange(e)}/>
+            <input type="text" placeholder="Facebook @username" name="facebook" value={facebook}
+              onChange={e => handleChange(e)} />
           </div>
 
           <div className="form-group social-input">
             <i className="fab fa-linkedin fa-2x"></i>
-            <input type="text" placeholder="Linkedin URL" name="linkedin" value={linkedin} 
-          onChange={e => handleChange(e)}/>
+            <input type="text" placeholder="Linkedin @username" name="linkedin" value={linkedin}
+              onChange={e => handleChange(e)} />
           </div>
 
           <div className="form-group social-input">
             <i className="fab fa-instagram fa-2x"></i>
-            <input type="text" placeholder="Instagram URL" name="instagram" value={instagram} 
-          onChange={e => handleChange(e)}/>
+            <input type="text" placeholder="Instagram @username" name="instagram" value={instagram}
+              onChange={e => handleChange(e)} />
+          </div>
+
+          <div className="form-group social-input">
+            <i className="fab fa-youtube fa-2x"></i>
+            <input type="text" placeholder="YouTube URL" name="youtube" value={youtube}
+              onChange={e => handleChange(e)} />
           </div>
         </Fragment>}
 
 
-        <input type="submit" onClick={e => handleSubmit(e)} className="btn btn-primary my-1" />
+        <input type="submit" value="Update" onClick={e => handleSubmit(e)} className="btn btn-primary my-1" />
         <Link to='/dashboard' className="btn btn-light my-1">Go Back</Link>
       </form>
     </div>
