@@ -46,7 +46,9 @@ export default function (state = initialState, action) {
         ...state,
         token: null,
         isAuthenticated: false,
-        loading: false
+        loading: false,
+        // Delete if to keep last user
+        user: null
       };
     default:
       return state;

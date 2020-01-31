@@ -286,6 +286,7 @@ img {
   display: block;
   margin-top: 0.3rem;
   color: #888;
+  font-family: var(--font-nunito) !important;
 }
 
 .form input[type='text'],
@@ -294,6 +295,7 @@ img {
 .form input[type='date'],
 .form select,
 .form textarea {
+  font-family: var(--font-nunito);
   display: block;
   width: 100%;
   padding: 0.4rem;
