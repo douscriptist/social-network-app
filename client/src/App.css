@@ -149,6 +149,14 @@ img {
   margin: 3rem 0;
 }
 
+.dash table {
+  width: 100%;
+}
+
+.dash table th{
+  text-align: center !important;
+}
+
 .btn {
   display: inline-block;
   background: var(--light-color);
@@ -160,6 +168,7 @@ img {
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+  border-radius: 25px;
 }
 
 .badge {
@@ -301,6 +310,7 @@ img {
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
+  resize: none;
 }
 
 .form input[type='submit'],
@@ -519,6 +529,17 @@ button {
 
 .post img {
   width: 100px;
+}
+
+.post-form .comments,
+.post-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.delete-button {
+  float: right;
 }
 
 .post .comment-count {
