@@ -7,7 +7,7 @@ import FromNow from '../../components/moment/FromNow';
 
 const CommentItem = ({ comment: { _id, text, name, avatar, user, date }, auth, pid, deleteComment }) => {
   return (
-    <div className="post bg-light p-1 my-1">
+    <div className={"post bg-comment p-1 my-1 " + (user === auth.user._id ? "bg-comment" : "bg-light")}>
       <div>
         <Link to={`/profile/user/${user}`}>
           <img className="round-img" src={avatar} alt="" />

@@ -47,8 +47,8 @@ const PostItem = ({ post: { _id, text, name, avatar, user, likes, comments, date
           </button>
           <Link to={`/posts/${_id}`} className="btn btn-primary">
             {comments.length > 0
-              ? (<span> <i className="far fa-comments"></i> {comments.length} </span>)
-              : (<span> <i className="far fa-comments"></i> <span className="text-primary"> {comments.length}</span> </span>)}
+              ? (<span> <i className="fas fa-comments"></i> {comments.length} </span>)
+              : (<span><i className="far fa-comments"></i> </span>)}
           </Link>
           {!auth.loading && user === auth.user._id && (
             <button onClick={e => deletePost(_id)} type="button" className="btn btn-danger delete-button" >

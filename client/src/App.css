@@ -9,6 +9,7 @@
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
+  --comment-color: #e6d5a7;
 }
 
 * {
@@ -200,6 +201,14 @@ img {
 .alert-primary {
   background: var(--primary-color);
   color: #fff;
+}
+
+.btn-comment,
+.bg-comment,
+.badge-comment,
+.alert-comment {
+  background: var(--comment-color);
+  color: #000;
 }
 
 .btn-light,
