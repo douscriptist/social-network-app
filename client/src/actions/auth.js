@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { API_URL } from '../utils/config';
 import { setAlert } from './alert';
 import {
   REGISTER_SUCCESS,
@@ -19,7 +20,7 @@ export const loadUser = () => async dispatch => {
   }
 
   try {
-    const res = await axios.get('/api/auth');
+    const res = await axios.get(`${API_URL}/api/auth`);
 
     dispatch({
       type: USER_LOADED,
@@ -42,13 +43,16 @@ export const register = ({ name, email, password }) => async dispatch => {
   const body = JSON.stringify({ name, email, password });
 
   try {
-    const res = await axios.post('/api/users', body, config);
+    const res = await axios.post(`${API_URL}/api/users`, body, config);
     dispatch({
       type: REGISTER_SUCCESS,
       payload: res.data
     });
     dispatch(loadUser());
   } catch (err) {
+    console.log(err)
+    console.log("err2")
+
     const errs = err.response.data.errors;
 
     if (errs) {
@@ -71,13 +75,15 @@ export const login = (email, password) => async dispatch => {
   const body = JSON.stringify({ email, password });
 
   try {
-    const res = await axios.post('/api/auth', body, config);
+    const res = await axios.post(`${API_URL}/api/auth`, body, config);
     dispatch({
       type: LOGIN_SUCCESS,
       payload: res.data
     });
     dispatch(loadUser());
   } catch (err) {
+    console.log(err)
+    console.log("err1")
     const errs = err.response.data.errors;
 
     if (errs) {

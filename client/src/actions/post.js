@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { API_URL } from '../utils/config';
 import { setAlert } from './alert';
 import {
   GET_POSTS,
@@ -18,7 +19,7 @@ export const getPosts = () => async dispatch => {
   dispatch({ type: CLEAR_POST })
   dispatch({ type: CLEAR_PROFILE });
   try {
-    const res = await axios.get('/api/posts');
+    const res = await axios.get(`${API_URL}/api/posts`);
     dispatch({
       type: GET_POSTS,
       payload: res.data
@@ -34,7 +35,7 @@ export const getPosts = () => async dispatch => {
 // Add Like
 export const addLike = pid => async dispatch => {
   try {
-    const res = await axios.put(`/api/posts/like/${pid}`);
+    const res = await axios.put(`${API_URL}/api/posts/like/${pid}`);
     dispatch({
       type: UPDATE_LIKES,
       payload: { pid, likes: res.data}
@@ -50,7 +51,7 @@ export const addLike = pid => async dispatch => {
 // Remove Like/Unlike
 export const removeLike = pid => async dispatch => {
   try {
-    const res = await axios.put(`/api/posts/unlike/${pid}`);
+    const res = await axios.put(`${API_URL}/api/posts/unlike/${pid}`);
     dispatch({
       type: UPDATE_LIKES,
       payload: { pid, likes: res.data}
@@ -66,7 +67,7 @@ export const removeLike = pid => async dispatch => {
 // Delete Post
 export const deletePost = pid => async dispatch => {
   try {
-    await axios.delete(`/api/posts/${pid}`);
+    await axios.delete(`${API_URL}/api/posts/${pid}`);
     dispatch({
       type: DELETE_POST,
       payload: pid
@@ -89,7 +90,7 @@ export const addPost = postForm => async dispatch => {
   };
 
   try {
-    const res = await axios.post('/api/posts', postForm, config);
+    const res = await axios.post(`${API_URL}/api/posts`, postForm, config);
     dispatch({
       type: ADD_POST,
       payload: res.data
@@ -106,7 +107,7 @@ export const addPost = postForm => async dispatch => {
 // Get Post by Id
 export const getPost = pid => async dispatch => {
   try {
-    const res = await axios.get(`/api/posts/${pid}`);
+    const res = await axios.get(`${API_URL}/api/posts/${pid}`);
     dispatch({
       type: GET_POST,
       payload: res.data
@@ -128,7 +129,7 @@ export const addComment = (pid, postForm) => async dispatch => {
   };
 
   try {
-    const res = await axios.post(`/api/posts/comment/${pid}`, postForm, config);
+    const res = await axios.post(`${API_URL}/api/posts/comment/${pid}`, postForm, config);
     dispatch({
       type: ADD_COMMENT,
       payload: res.data
@@ -145,7 +146,7 @@ export const addComment = (pid, postForm) => async dispatch => {
 // Delete Comment
 export const deleteComment = (pid, commid) => async dispatch => {
   try {
-    await axios.delete(`/api/posts/comment/${pid}/${commid}`);
+    await axios.delete(`${API_URL}/api/posts/comment/${pid}/${commid}`);
     dispatch({
       type: REMOVE_COMMENT,
       payload: commid
