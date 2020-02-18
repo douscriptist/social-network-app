@@ -50,9 +50,6 @@ export const register = ({ name, email, password }) => async dispatch => {
     });
     dispatch(loadUser());
   } catch (err) {
-    console.log(err)
-    console.log("err2")
-
     const errs = err.response.data.errors;
 
     if (errs) {
@@ -82,8 +79,6 @@ export const login = (email, password) => async dispatch => {
     });
     dispatch(loadUser());
   } catch (err) {
-    console.log(err)
-    console.log("err1")
     const errs = err.response.data.errors;
 
     if (errs) {
