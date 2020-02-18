@@ -50,7 +50,6 @@ export const register = ({ name, email, password }) => async dispatch => {
     });
     dispatch(loadUser());
   } catch (err) {
-
     const errs = err.response.data.errors;
 
     if (errs) {
